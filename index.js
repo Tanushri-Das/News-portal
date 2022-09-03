@@ -52,7 +52,7 @@ const displayLoadNews = news =>{
         noNews.classList.add('d-none');
     }
     const noItemFound = document.getElementById('no-item-found');
-    if(news.length > 0){
+    if(news.length === 0 || news.length > 0){
         noItemFound.innerHTML=`
         <p>${news.length} items in this section</p>`;
         noItemFound.classList.remove('d-none');
