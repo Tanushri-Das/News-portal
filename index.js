@@ -48,7 +48,7 @@ const displayLoadNews = news =>{
     const noItemFound = document.getElementById('no-item-found');
     if(news.length === 0 || news.length > 0){
         noItemFound.innerHTML=`
-        <p>${news.length} items in this section</p>`;
+        <p class="fs-5 px-2">${news.length} items in this section</p>`;
         noItemFound.classList.remove('d-none');
     }
     else{
