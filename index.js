@@ -15,9 +15,6 @@ categoryList.innerHTML=`
 <h5>Home</h5>`
 categoriesContainer.appendChild(categoryList)
 for(const category of categories){
-    // console.log(category.category_id[0])
-   
-
     const categoryList = document.createElement('li');
     categoryList.classList.add('col');
     categoryList.innerHTML = `
@@ -38,9 +35,6 @@ const loadNewsDetails = id =>{
 }
 
 const displayLoadNews = news =>{
-    // console.log(news)
-   
-    
     const newsCategoryContainer = document.getElementById('news-category-container');
     newsCategoryContainer.innerText='';
     const noNews = document.getElementById('no-news-message');
@@ -64,7 +58,7 @@ const displayLoadNews = news =>{
     
     
     for(const myNews of news){
-        // console.log(myNews)
+       
         const newsDiv = document.createElement('div');
         newsDiv.classList.add('col');
         newsDiv.innerHTML = `
@@ -106,7 +100,7 @@ const loadModalNewsDetails = id =>{
     .then(data => displayLoadModalNewsDetails(data.data[0]))
 }
 const displayLoadModalNewsDetails = details =>{
-    // console.log(details)
+   
     const newsDetailModalThumbnail = document.getElementById('news-detail-modal-thumbnail');
     newsDetailModalThumbnail.src = details.thumbnail_url;
     const modalTitle = document.getElementById('newsDetailModalLabel');
