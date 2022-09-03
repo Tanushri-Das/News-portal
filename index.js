@@ -35,6 +35,9 @@ const loadNewsDetails = id =>{
 }
 
 const displayLoadNews = news =>{
+    news.sort(function (a, b) {
+        return b.total_view - a.total_view
+    });
     const newsCategoryContainer = document.getElementById('news-category-container');
     newsCategoryContainer.innerText='';
     const noNews = document.getElementById('no-news-message');
@@ -54,9 +57,7 @@ const displayLoadNews = news =>{
     else{
         noItemFound.classList.add('d-none');
     }
-
-    
-    
+ 
     for(const myNews of news){
        
         const newsDiv = document.createElement('div');
