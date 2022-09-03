@@ -68,9 +68,11 @@ const displayLoadNews = news =>{
               
                 <p class="card-text">${myNews.title}</p>
                 <p class="card-text">${myNews.details.slice(0,140)+"..."}</p>
+                <div class="d-flex align-items-center">
                 <img src="${myNews.author.img}" class="rounded-circle w-50 d-inline" alt="...">
-                <h4 class="card-title mt-2">${myNews.author.name ? myNews.author.name : 'No author name available'}</h4>
-                <p>Published Date : ${myNews.author.published_date ? myNews.author.published_date : 'No published date available'}</p>
+                <h4 class="card-title mt-4 ms-3">${myNews.author.name ? myNews.author.name : 'No author name available'}</h4>
+                </div>
+                <p class="mt-2">Published Date : ${myNews.author.published_date ? myNews.author.published_date : 'No published date available'}</p>
                 
                 <p><img style="width:35px" src="view.png" alt="..."> ${myNews.total_view ? myNews.total_view : 'No total view found'}</p>
                 <button type="button" onclick="loadModalNewsDetails('${myNews._id}')" class="btn btn-primary fs-5" data-bs-toggle="modal" data-bs-target="#newsDetailModal">
