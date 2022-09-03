@@ -113,10 +113,5 @@ const displayLoadModalNewsDetails = details =>{
     <p>Total View : ${details.total_view ? details.total_view : 'No view found'}</p>
     `
 }
-// loadModalNewsDetails()
-
-
-
-// loadNewsDetails()
 
 loadCategories()
