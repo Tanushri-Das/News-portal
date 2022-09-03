@@ -71,7 +71,7 @@ const displayLoadNews = news =>{
                 <p class="card-text">${myNews.details.slice(0,140)+"..."}</p>
                 <div class="d-flex align-items-center">
                 <img src="${myNews.author.img}" class="rounded-circle w-50 d-inline" alt="...">
-                <h4 class="card-title mt-4 ms-3">${myNews.author.name ? myNews.author.name : 'No author name available'}</h4>
+                <h5 class="card-title mt-4 ms-3">${myNews.author.name ? myNews.author.name : 'No author name available'}</h5>
                 </div>
                 <p class="mt-2">Published Date : ${myNews.author.published_date ? myNews.author.published_date : 'No published date available'}</p>
                 
